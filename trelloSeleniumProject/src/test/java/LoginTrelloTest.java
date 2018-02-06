@@ -19,7 +19,7 @@ public class LoginTrelloTest {
     
     @BeforeMethod
     public void setUp() throws Exception {
-        wd = new ChromeDriver(); //FirefoxDriver(new FirefoxOptions().setLegacy(true));
+        wd = new  ChromeDriver(); //FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
     
