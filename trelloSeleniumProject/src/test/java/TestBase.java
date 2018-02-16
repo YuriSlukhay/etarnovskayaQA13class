@@ -26,7 +26,15 @@ public class TestBase {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         openSite("https://trello.com");
+
     }
+
+    @AfterClass
+    public void tearDown() {
+        wd.quit();
+    }
+
+    //__________________________________________________________
 
     protected void confirmLogInButton() {
         wd.findElement(By.id("login")).click();
@@ -52,13 +60,17 @@ public class TestBase {
         wd.get(url);
     }
 
-    @AfterClass
-    public void tearDown() {
-        wd.quit();
-    }
+
 
     protected void logout() {
         wd.findElement(By.cssSelector("span.member-initials")).click();
         wd.findElement(By.cssSelector("a.js-logout")).click();
+    }
+
+    public void login(String user, String pwd){
+        clickLogInButton();
+        enterUserName(user);
+        enterPassword(pwd);
+        confirmLogInButton();
     }
 }

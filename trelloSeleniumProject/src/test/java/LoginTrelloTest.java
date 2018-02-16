@@ -2,9 +2,13 @@ import org.testng.annotations.*;
 
 public class LoginTrelloTest extends TestBase {
 
+@BeforeMethod
+        public void createPreconditions(){
+    openSite("https://trello.com");
+}
 
 
-    @Test
+    @Test(priority = 1)
     public void LoginTrelloTest() {
 
         clickLogInButton();
@@ -14,7 +18,7 @@ public class LoginTrelloTest extends TestBase {
         logout();
          }
 
-    @Test
+    @Test(priority = 2)
     public void ALoginTrelloTestNotValidmail() {
 
         clickLogInButton();
