@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests_main.iml" group="addressbook-selenium-tests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-selenium-tests_test.iml" group="addressbook-selenium-tests" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sundbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sundbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sundbox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sundbox_main.iml" group="sundbox" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sundbox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sundbox_test.iml" group="sundbox" />
