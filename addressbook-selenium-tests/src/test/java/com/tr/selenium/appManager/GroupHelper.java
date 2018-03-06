@@ -2,14 +2,13 @@ package com.tr.selenium.appManager;
 
 import com.tr.selenium.model.GroupData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class GroupHelper extends HelperBase{
 
 
-    private FirefoxDriver wd;
-
-    public GroupHelper(FirefoxDriver wd) {
+    public GroupHelper(WebDriver wd) {
         super(wd);
     }
 
@@ -53,5 +52,21 @@ public class GroupHelper extends HelperBase{
 
     public int getGroupCount() {
         return  wd.findElements(By.name("selected[]")).size();
+    }
+
+    public void createGroup() {
+        initGroupCreation();
+        fillGroupForm(new GroupData()
+                .withGroupName("test1")
+                .withGroupFooter("Test1Footer"));
+        submitGroupCreation();
+        returnToGroupsPage();
+    }
+
+    public boolean isGroupExist() {
+       return isElementPresent((By.name("selected[]")));
+
+
+
     }
 }
