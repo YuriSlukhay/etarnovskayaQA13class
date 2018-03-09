@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="addressbook" verbose="1" >
+    <test name="Groups" >
+        <classes>
+            <class name="com.tr.selenium.tests.GroupCreationTests" />
+            <class name="com.tr.selenium.tests.GroupModificationTests" />
+            <class name="com.tr.selenium.tests.GroupDeletionTests" />
+        </classes>
+    </test>
+
+</suite>
