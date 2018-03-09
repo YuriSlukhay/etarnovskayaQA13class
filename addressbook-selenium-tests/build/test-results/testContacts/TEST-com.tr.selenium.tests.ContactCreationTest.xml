@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tr.selenium.tests.ContactCreationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-03-09T09:12:53" hostname="DESKTOP-HCUEGGS" time="3.941">
-  <properties/>
-  <testcase name="creationContactTest" classname="com.tr.selenium.tests.ContactCreationTest" time="3.941"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
