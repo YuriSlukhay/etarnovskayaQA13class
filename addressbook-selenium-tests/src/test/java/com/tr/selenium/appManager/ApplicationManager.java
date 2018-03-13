@@ -10,6 +10,10 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
@@ -19,14 +23,18 @@ public class ApplicationManager {
     private NavigationHelper navigationHelper;
     WebDriver wd;
     private String browser;
+    Properties properties;
 
     public ApplicationManager(String browser) {
-        this.browser = browser;
+       this.browser = browser;
+       properties = new Properties();
     }
 
 
-    public void start() {
-     //   String browser = BrowserType.CHROME;
+    public void start() throws IOException {
+        String target = System.getProperty("target", "local");
+        properties.load(new FileReader(String.format("addressbook-selenium-tests/src/test/resources/%s.properties", target)));
+        //   String browser = BrowserType.CHROME;
         if (browser.equals(BrowserType.FIREFOX)) {
             wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         } else if (browser.equals(BrowserType.CHROME)) {
@@ -41,15 +49,14 @@ public class ApplicationManager {
         sessionHelper = new SessionHelper(wd);
         navigationHelper = new NavigationHelper(wd);
 
-        openSite();
-        sessionHelper.logIn("admin", "secret");
+        openSite(properties.getProperty("web.baseUrl"));
+        sessionHelper.logIn(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPwd"));//"admin", "secret");
     }
 
+  //
 
 
-
-
-    public void openSite() {
+    public void openSite(String property) {
         wd.get("http://localhost/addressbook/");
     }
 

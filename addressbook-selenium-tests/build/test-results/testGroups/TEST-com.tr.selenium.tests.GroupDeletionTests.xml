@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tr.selenium.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-03-09T09:43:35" hostname="DESKTOP-HCUEGGS" time="61.47">
+<testsuite name="com.tr.selenium.tests.GroupDeletionTests" tests="1" skipped="1" failures="0" errors="0" timestamp="2018-03-13T17:09:41" hostname="DESKTOP-HCUEGGS" time="0.0">
   <properties/>
-  <testcase name="deletionGroupTest" classname="com.tr.selenium.tests.GroupDeletionTests" time="61.47"/>
+  <testcase name="deletionGroupTest" classname="com.tr.selenium.tests.GroupDeletionTests" time="0.0">
+    <skipped/>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
