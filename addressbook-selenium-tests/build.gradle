@@ -11,8 +11,10 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile 'org.seleniumhq.selenium:selenium-java:3.10.0'
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.11.0'
     compile 'org.testng:testng:6.14.2'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+
 }
 task testGroups(type:Test){
     useTestNG{

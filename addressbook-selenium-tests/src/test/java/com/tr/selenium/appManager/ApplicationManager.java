@@ -53,7 +53,10 @@ public class ApplicationManager {
         sessionHelper.logIn(properties.getProperty("web.adminLogin"), properties.getProperty("web.adminPwd"));//"admin", "secret");
     }
 
-  //
+    public void getBroserLog(){
+        System.out.println(wd.manage().logs().getAvailableLogTypes());
+        wd.manage().logs().get("browser").forEach(1 -> System.out.println(l));
+    }
 
 
     public void openSite(String property) {
