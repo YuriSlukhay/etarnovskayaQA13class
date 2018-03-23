@@ -33,7 +33,7 @@ public class ApplicationManager {
 
     public void start() throws IOException {
         String target = System.getProperty("target", "local");
-        properties.load(new FileReader(String.format("addressbook-selenium-tests/src/test/resources/%s.properties", target)));
+        properties.load(new FileReader(String.format("src/test/resources/%s.properties", target)));
         //   String browser = BrowserType.CHROME;
         if (browser.equals(BrowserType.FIREFOX)) {
             wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
@@ -55,7 +55,8 @@ public class ApplicationManager {
 
     public void getBroserLog(){
         System.out.println(wd.manage().logs().getAvailableLogTypes());
-        wd.manage().logs().get("browser").forEach(1 -> System.out.println(l));
+        wd.manage().logs().get("browser").forEach(l -> System.out.println(l));
+        //forEach(1 -> System.out.println(l))
     }
 
 
